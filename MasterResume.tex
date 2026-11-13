@@ -1,0 +1,219 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape David Adeniyi} \\ \vspace{1pt}
+    \small 204-930-3026 $|$ \href{mailto:dadeniyi54@gmail.com}{\underline{dadeniyi54@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/adeniyi-david}{\underline{linkedin.com/in/adeniyi-david}} $|$
+    \href{https://github.com/DavidAde6}{\underline{github.com/DavidAde6}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AI Platform Engineering Intern}{Sept 2026 -- Dec 2026}
+      {Nokia}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Enabled 15+ engineering teams to build and deploy AI agents by architecting an end-to-end agent platform, integrating agent memory, observability, guardrails, and evaluation across GCP, AWS, Azure, and NVIDIA on-prem, selected for demonstration at NVIDIA GTC 2027}
+        \resumeItem{Accelerated agent delivery from 3 weeks to 3–5 days by building reusable Python runtimes and adapters that allowed engineers to deploy agents without writing separate integrations for each framework.} 
+        \resumeItem{Automated releases for 8+ containerized services by developing reusable cloud deployment adapters that replaced environment-specific workflows, reducing setup time from around 2 days of manual setup to 3 hours}
+        \resumeItem{Drove cross-team architectural alignment by authoring 30+ Architecture Decision Records covering AI gateway architecture, Kubernetes, IAM, secrets, and observability (Prometheus/Grafana)} 
+        \resumeItem{Resolved integration challenges for 15+ internal engineering teams by translating developer feedback into custom API request formats, fixing framework compatibility issues, and simplifying cloud deployment configurations.} 
+        \resumeItem{Presented live enterprise agent demos to Senior VP level leadership, demonstrating client-built agents using platform configured memory, guardrails, and orchestration, directly influencing platform adoption decision}
+        \resumeItem{Eliminated platform-specific integration research for customers by working directly with Microsoft and Google engineers to build reusable memory, guardrail, and tool-calling integrations} 
+        \resumeItem{Reduced manual Kubernetes deployment configuration from 18 steps to 3 across 6+ environments by automating runtime and policy setup with reusable manifests and Custom Resource Definitions (CRDs)}
+        \resumeItem{Automated container builds for 8+ services using GitLab CI/CD and multi-stage Docker builds, reducing Python container image sizes by 70\%}
+        \resumeItem{Reduced cross-service debugging time by 40\% by instrumenting 15+ services with OpenTelemetry and GenAI telemetry, using Prometheus, Grafana, and OpenSearch to monitor and diagnose failures.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Agentic AI Engineering Intern}{May 2026 -- Aug 2026}
+      {Nokia}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Cut LLM evaluation setup time from 5 days to 2 hours, by engineering a standardized evaluation framework with 6+ LLM-as-judge metrics across multi-cloud and on-prem deployments}
+        \resumeItem{Engineered a portable runtime unifying execution, tool calling, and lifecycle management across LangGraph, OpenAI Agents, and Google ADK, reducing agent deployment setup time down to 1-2 hours}
+        \resumeItem{Reduced session retrieval latency by 85\% and database queries by 90\% by caching conversation data in Valkey alongside persistent SQL storage, achieving sub-millisecond cache reads}
+        \resumeItem{Automated AI-assisted code reviews for 100+ merge requests across 9+ projects through GitLab CI/CD, reducing manual review effort by up to 80\% and surfacing actionable issues before human review}
+        \resumeItem{Integrated image signing, SBOM generation, and Anchore vulnerability scanning into automated CI/CD pipelines, enforcing security checks across container images and identifying 20+ vulnerabilities before release.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineering Intern}{July 2025 - Sept 2025}
+      {AFM}{Winnipeg, MB}
+      \resumeItemListStart
+        \resumeItem{Led end-to-end development of a store operations platform (React, Flask) across 3 stores, translating stakeholder workflows into technical requirements, eliminating inventory and catalog failures across day-to-day operations.}
+        \resumeItem{Eliminated stock inconsistencies across 250+ products by designing a normalized SQLite database with relational constraints and input validation, creating a single source of truth for product and inventory records}
+        \resumeItem{Stabilized React–Flask workflows handling 200+ monthly interactions by resolving state synchronization and API integration bugs that caused inconsistent UI updates and failed requests.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Platter: AI Nutrition Platform for Diabetics} $|$ \emph{AWS, LangGraph, Redis, PostgreSQL, FastAPI, OpenCV}}{}
+          \resumeItemListStart
+            \resumeItem{Built an end-to-end AI nutrition platform for diabetes management, combining LLM reasoning with dietary habits, nutritional needs, and health goals to deliver context-aware assessments and actionable dietary recommendations}
+            \resumeItem{Achieved 70-87\% recommendation relevance across 80 evaluation queries by engineering a personalized ranking system combining LLM-generated flavour profiles, vector embeddings, semantic similarity, and multi-stage filtering}
+            \resumeItem{Improved insight relevance by 4x through developing a multimodal LangGraph pipeline integrating vision models, LLM reasoning, and RAG over 8,000+ nutritional records}
+            \resumeItem{Expanded recipe discovery from 21 to 4000+ options by integrating external recipe APIs and prototyping LLM-generated recipes tailored to user preferences.}
+            \resumeItem{Reduced repeated data retrieval latency by roughly 85\% through Redis caching and PostgreSQL persistence for user profiles, meal history, and recommendation context.}
+            \resumeItem{Enabled independent scaling of AI inference and backend workloads by deploying containerized services on AWS EKS using Kubernetes and Docker, supporting 30+ concurrent requests.}
+            \resumeItem{Reduced monthly infrastructure costs by around 90\% by migrating from AWS EKS to VPS-hosted Docker Compose, preserving service isolation and automated deployments.}
+            \resumeItem{Reduced deployment time from 15 to 3 minutes by automating tests, container image builds, and server updates through GitHub Actions CI/CD across 3 services.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Nitrogen Dioxide Level Forecasting} $|$ \emph{GCP, Python, TensorFlow, Numpy, Pandas}}{}
+          \resumeItemListStart
+            \resumeItem{Achieved 9\% MAPE in 7-day atmospheric NO2 forecasting by training LSTM neural networks using TensorFlow on historical satellite measurements}
+            \resumeItem{Transformed approximately 5,000 ESA Sentinel-5P satellite observations into model-ready time-series datasets by building a geospatial data pipeline using GCP's Google Earth Engine.}
+
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carleton University}{Ottawa, ON}
+      {Bachelor of Computer Science, Co-op}{GPA: 3.9/4.0 \textbar{} Expected: May 2028}
+    \resumeItemListStart
+        \resumeItem{Relevant Coursework: Data Structures \& Algorithms, Systems Programming, Statistical Modeling, Databases }
+        \resumeItem{Carleton Quantum Computing (Exec) Henry M. Tory Scholarship (\$12000)}
+        % ONLY USE AVAILABILITY WHEN REQUIRED FOR THE JOB 
+        \resumeItem{Internship Availability: May 1, 2027 -- December 31, 2027}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go (Golang), Java, C, C++, JavaScript, TypeScript, SQL, Bash, Rust, HTML/CSS} \\
+     
+     \textbf{Backend / Databases}{: FastAPI, Flask, REST, gRPC, PostgreSQL, MongoDB, SQLite, Redis, Valkey, Kafka, Nginx, React} \\
+     \textbf{AI / ML}{: LangGraph, OpenAI Agents SDK, Google ADK, RAG, Vector Databases, PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy} \\
+     \textbf{Cloud / DevOps}{: AWS, GCP, Azure, Docker, Kubernetes, Linux, Git, GitLab CI/CD, GitHub Actions, Terraform, OpenTelemetry, Prometheus, Grafana, OpenSearch} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
